@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">C4C</string>
+
+    <!-- Strings related to mpepver -->
+    <string name="prompt_email">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_up">Sign up</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."</string>
+    <string name="Share">Share</string>
+    <string name="Print">Print</string>
+    <string name="register">Register</string>
+    <string name="report">Report</string>
+    <string name="Send_SMS">Send SMS from the app</string>
+    <string name="Send_SMS_desc">C4C is an sms based application that sends and receives data through sms</string>
+    <string name="Landing_page_title">Welcome to C4C</string>
+    <string name="Landing_page_title_with_register">C4C</string>
+    <string name="nascop_website">Nascop Website</string>
+    <string name="Art">ART Guidelines</string>
+    <string name="faq">FAQ</string>
+    <string name="mfl">MFL</string>
+
+    <string-array name="cadre_array">
+        <item>Doctor</item>
+        <item>Clinical Officer</item>
+        <item>Nurses</item>
+        <item>Pharmtech</item>
+        <item>Lab Technician</item>
+        <item>Interns</item>
+        <item>Students</item>
+        <item>Support Staff</item>
+    </string-array>
+
+
+
+
+</resources>
