@@ -48,7 +48,7 @@ public class SpinnerAdapter extends BaseAdapter {
         TextView names = (TextView) view.findViewById(R.id.spinnerText);
         names.setText(Options[i]);
         String mys=Options[i];
-        if(mys.contentEquals("Please Select Gender")||mys.contentEquals("Please Select Marital Status")||mys.contentEquals("Please Select Condition")||mys.contentEquals("Please Select Language")||mys.contentEquals("Please Select Status")||mys.contentEquals("Please Select Cadre")||mys.contentEquals("Enable Sms")||mys.contentEquals("Where did the exposure occur?")||mys.contentEquals("What caused the exposure?")){
+        if(mys.contentEquals("Please Select Gender")||mys.contentEquals("Please Select Marital Status")||mys.contentEquals("Please Select Condition")||mys.contentEquals("Please Select Language")||mys.contentEquals("Please Select Status")||mys.contentEquals("Please Select Cadre")||mys.contentEquals("Enable Sms")||mys.contentEquals("Where did the exposure occur?")||mys.contentEquals("What caused the exposure?")||mys.contentEquals("Have you been vaccinated against Hepatitis B?")){
 
 
             names.setBackgroundResource(R.color.mycolor);

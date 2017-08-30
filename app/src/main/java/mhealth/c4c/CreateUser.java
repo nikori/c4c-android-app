@@ -55,6 +55,7 @@ public class CreateUser extends AppCompatActivity implements AdapterView.OnItemS
 
     String[] genders={"Please Select Gender","Male","Female","Transgender"};
     String[] cadres={"Please Select Cadre","Student","Doctor","Nurse","Clinical officer","Laboratory technologist","Cleaner","Waste Handlers","Vct Counsellor"};
+    String[] hepa={"Have you been vaccinated against Hepatitis B?","Partial","Yes","No"};
 
 
     List<UserTable> user_list = new ArrayList<>();
@@ -62,10 +63,12 @@ public class CreateUser extends AppCompatActivity implements AdapterView.OnItemS
     int selectedYear;
     Spinner myspinner;
     Spinner myspinner2;
+    Spinner myspinner3;
     String selected_item="";
     String myselected="";
     String selected_item2="";
     String myselected2="";
+    String myselected3="";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -78,9 +81,11 @@ public class CreateUser extends AppCompatActivity implements AdapterView.OnItemS
 
         populateSpinner();
         populateSpinner2();
+        populateSpinner3();
 
         myspinner.setOnItemSelectedListener(this);
         myspinner2.setOnItemSelectedListener(this);
+        myspinner3.setOnItemSelectedListener(this);
 
 
     }
@@ -136,6 +141,7 @@ public class CreateUser extends AppCompatActivity implements AdapterView.OnItemS
             mcpassE=(EditText) findViewById(R.id.mcpass);
             myspinner=(Spinner) findViewById(R.id.spinner);
             myspinner2=(Spinner) findViewById(R.id.spinner2);
+            myspinner3=(Spinner) findViewById(R.id.spinner3);
             correctMfl=false;
 
         }
@@ -161,6 +167,13 @@ public class CreateUser extends AppCompatActivity implements AdapterView.OnItemS
 
 //            selected_item2=parent.getItemAtPosition(position).toString();
             myselected2=Integer.toString(position);
+            actOnSelected();
+
+        }
+        else if (spin.getId()==R.id.spinner3){
+
+//            selected_item2=parent.getItemAtPosition(position).toString();
+            myselected3=Integer.toString(position);
             actOnSelected();
 
         }
@@ -207,6 +220,23 @@ public class CreateUser extends AppCompatActivity implements AdapterView.OnItemS
             SpinnerAdapter customAdapter=new SpinnerAdapter(getApplicationContext(),cadres);
 
             myspinner2.setAdapter(customAdapter);
+
+
+        }
+
+        catch(Exception e){
+
+
+        }
+    }
+
+    public void populateSpinner3(){
+
+        try{
+
+            SpinnerAdapter customAdapter=new SpinnerAdapter(getApplicationContext(),hepa);
+
+            myspinner3.setAdapter(customAdapter);
 
 
         }
@@ -286,8 +316,16 @@ public class CreateUser extends AppCompatActivity implements AdapterView.OnItemS
 
             }
 
+
             else if(myselected2.contentEquals("0")){
                 Toast.makeText(this, "Please select Cadre", Toast.LENGTH_LONG).show();
+
+
+            }
+
+
+            else if(myselected3.contentEquals("0")){
+                Toast.makeText(this, "Specify your vaccination", Toast.LENGTH_LONG).show();
 
 
             }
@@ -454,14 +492,14 @@ public class CreateUser extends AppCompatActivity implements AdapterView.OnItemS
                                 String mflName=response;
 
                                 if(correctMfl){
-                                    RegistrationTable rt=new RegistrationTable(myname,mylname,myselected,myselected2,myidno,myage,mymfl,myuname,mympass);
+                                    RegistrationTable rt=new RegistrationTable(myname,mylname,myselected,myselected2,myidno,myage,mymfl,myselected3,myuname,mympass);
                                     rt.save();
 
-                                    String mymess="Reg*"+myname+"*"+mylname+"*"+myidno+"*"+myage+"*"+myselected+"*"+myselected2+"*"+mymfl+"*"+myuname+"*"+mympass;
+                                    String mymess="Reg*"+myname+"*"+mylname+"*"+myidno+"*"+myage+"*"+myselected+"*"+myselected2+"*"+mymfl+"*"+myselected3+"*"+myuname+"*"+mympass;
 
 
                                         SmsManager smsM=SmsManager.getDefault();
-                                        smsM.sendTextMessage("40149",null,mymess,null,null);
+                                        smsM.sendTextMessage("40145",null,mymess,null,null);
                                         SignupsuccessDialog("Success in Registration");
 
 

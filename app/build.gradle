@@ -5,11 +5,11 @@ android {
     buildToolsVersion '25.0.0'
 
     defaultConfig {
-        applicationId "mhealth.c4c"
+        applicationId "mhealth.login"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 20
-        versionName "1.787131"
+        versionCode 27
+        versionName "1.787645"
     }
     buildTypes {
         release {

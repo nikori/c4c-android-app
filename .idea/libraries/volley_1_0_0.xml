@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="volley-1.0.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/483a3e2153cdf9fd2438615cfef28861b3f02151/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/483a3e2153cdf9fd2438615cfef28861b3f02151/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/b37baa1d4d4c5152a888f56cb28b143a1433b693/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/b37baa1d4d4c5152a888f56cb28b143a1433b693/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.volley/volley/1.0.0/c79696d64f9520675054e27b77f490c17d8b4b9e/volley-1.0.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../apps/gradle-3.1/caches/modules-2/files-2.1/com.android.volley/volley/1.0.0/c79696d64f9520675054e27b77f490c17d8b4b9e/volley-1.0.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

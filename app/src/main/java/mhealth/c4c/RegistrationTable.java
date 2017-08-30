@@ -7,12 +7,12 @@ import com.orm.SugarRecord;
  */
 
 public class RegistrationTable extends SugarRecord {
-    String name,lname,idnumber,age,mflcode,username,password,gender,cadre;
+    String name,lname,idnumber,age,mflcode,myhepa,username,password,gender,cadre;
 
     public RegistrationTable(){
 
     }
-    public RegistrationTable(String nm,String lname,String gender,String cadre,String idnum,String age,String code,String uname,String pass){
+    public RegistrationTable(String nm,String lname,String gender,String cadre,String idnum,String age,String code,String hepa,String uname,String pass){
 
         this.name=nm;
         this.lname=lname;
@@ -20,6 +20,7 @@ public class RegistrationTable extends SugarRecord {
         this.age=age;
         this.mflcode=code;
         this.username=uname;
+        this.myhepa=hepa;
         this.password=pass;
         this.gender=gender;
         this.cadre=cadre;
@@ -95,5 +96,13 @@ public class RegistrationTable extends SugarRecord {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getMyhepa() {
+        return myhepa;
+    }
+
+    public void setMyhepa(String myhepa) {
+        this.myhepa = myhepa;
     }
 }

@@ -217,9 +217,7 @@ public class Mylogin extends AppCompatActivity {
         String[] permissions = new String[]{
                 android.Manifest.permission.SEND_SMS,
                 android.Manifest.permission.READ_SMS,
-                android.Manifest.permission.GET_ACCOUNTS,
                 android.Manifest.permission.RECEIVE_SMS,
-                android.Manifest.permission.READ_CONTACTS,
                 android.Manifest.permission.INTERNET
         };
 
